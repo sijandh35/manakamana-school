@@ -23,7 +23,6 @@ docker-compose.yml
 external_services.yml
 postgres-data/
 /static/
-static
 logs
 logs/
 sock/
