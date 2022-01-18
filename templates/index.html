@@ -1,249 +1,328 @@
-<!DOCTYPE html>
-<!--[if IE 8]> <html class="ie8 oldie" lang="en"> <![endif]-->
-<!--[if gt IE 8]><!--> <html lang="en"> <!--<![endif]-->
-<head>
-	<meta charset="utf-8">
-	<title>Manakamana Secondary Boarding School</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
-	<link rel="stylesheet" media="all" href="css/style.css">
-	<!--[if lt IE 9]>
-		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-	<![endif]-->
-</head>
-<body>
+{% extends 'base.html' %}
+{% load static %}
 
-	<header id="header">
-		<div class="container">
-			<a href="index.html" id="logo" title="Manakamana Secondary Boarding School">Manakamana Secondary Boarding School</a>
-			<div class="menu-trigger"></div>
-			<nav id="menu">
-				<ul>
-					<li><a href="events.html">Courses</a></li>
-					<li><a href="gallery.html">Students</a></li>
-					<li><a href="events.html">Events</a></li>
- 				</ul>
-				<ul>
-					<li><a href="gallery.html">Teachers</a></li>
-					<li><a href="gallery.html">Gallery</a></li>
-					<li><a href="#fancy" class="get-contact">Contact</a></li>
-   				</ul>
-			</nav>
-			<!-- / navigation -->
-		</div>
-		<!-- / container -->
-	
-	</header>
-	<!-- / header -->
-	
-	<div class="slider">
-		<ul class="bxslider">
-			<li>
-				<div class="container">
-					<div class="info">
-						<h2>It’s Time to <br><span>Get back to school</span></h2>
-						<a href="#">Check out our new programs</a>
+	{% block home_page %}
+	<div class="main-section">
+
+		{% include 'headers.html' %}
+
+		<section class="main-banner">
+			<div class="container">
+				<div class="row align-items-center">
+					<div class="col-lg-7 col-md-7">
+						<div class="banner-text wow fadeInLeft" data-wow-duration="1000ms">
+							<h2>The Smarter  Way to Learn <span>Anything</span></h2>
+							<p>Mauris malesuada enim eget blandit gravida. Duis hendrerit cursus turpis, id mollis est rutrum nec. Sed interdum nisi id libero tincidunt, sit amet vestibulum tortor porttitor. Cras ligula lacus, ullamcorper sed</p>
+							<form class="search-form">
+								<input type="text" name="search" placeholder="Search Class">
+								<button><i class="fa fa-search"></i></button>
+							</form>
+						</div>
+					</div>
+					<div class="col-lg-5 col-md-5">
+						<div class="banner-img wow zoomIn" data-wow-duration="1000ms">
+							<img src="https://via.placeholder.com/497x586" alt="">
+						</div><!--banner-img end-->
+						<div class="elements-bg wow zoomIn" data-wow-duration="1000ms"></div>
 					</div>
 				</div>
-				<!-- / content -->
-			</li>
-			<li>
-				<div class="container">
-					<div class="info">
-						<h2>It’s Time to <br><span>Get back to school</span></h2>
-						<a href="#">Check out our new programs</a>
-					</div>
-				</div>
-				<!-- / content -->
-			</li>
-			<li>
-				<div class="container">
-					<div class="info">
-						<h2>It’s Time to <br><span>Get back to school</span></h2>
-						<a href="#">Check out our new programs</a>
-					</div>
-				</div>
-				<!-- / content -->
-			</li>
-		</ul>
-		<div class="bg-bottom"></div>
-	</div>
+			</div>
+		</section><!--main-banner end-->
+		
+		<h2 class="main-title">Shelly</h2>
+
+	</div><!--main-section end-->
+	{% endblock %}
+
 	
-	<section class="posts">
-		<div class="container">
-			<article>
-				<div class="pic"><img width="121" src="images/2.png" alt=""></div>
-				<div class="info">
-					<h3>The best learning methods</h3>
-					<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis quasi architecto beatae vitae dicta sunt explicabo. </p>
-				</div>
-			</article>
-			<article>
-				<div class="pic"><img width="121" src="images/3.png" alt=""></div>
-				<div class="info">
-					<h3>Awesome results of our students</h3>
-					<p>Vero eos et accusamus et iusto odio dignissimos ducimus blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa.</p>
-				</div>
-			</article>
-		</div>
-		<!-- / container -->
-	</section>
-
-	<section class="news">
-		<div class="container">
-			<h2>Latest news</h2>
-			<article>
-				<div class="pic"><img src="images/1.png" alt=""></div>
-				<div class="info">
-					<h4>Omnis iste natus error sit voluptatem accusantium </h4>
-					<p class="date">14 APR 2014, Jason Bang</p>
-					<p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores (...)</p>
-					<a class="more" href="#">Read more</a>
-				</div>
-			</article>
-			<article>
-				<div class="pic"><img src="images/1_1.png" alt=""></div>
-				<div class="info">
-					<h4>Omnis iste natus error sit voluptatem accusantium </h4>
-					<p class="date">14 APR 2014, Jason Bang</p>
-					<p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores (...)</p>
-					<a class="more" href="#">Read more</a>
-				</div>
-			</article>
-			<div class="btn-holder">
-				<a class="btn" href="#">See archival news</a>
-			</div>
-		</div>
-		<!-- / container -->
-	</section>
-
-	<section class="events">
-		<div class="container">
-			<h2>Upcoming events</h2>
-			<article>
-				<div class="current-date">
-					<p>April</p>
-					<p class="date">15</p>
-				</div>
-				<div class="info">
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
-					<a class="more" href="#">Read more</a>
-				</div>
-			</article>
-			<article>
-				<div class="current-date">
-					<p>April</p>
-					<p class="date">17</p>
-				</div>
-				<div class="info">
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
-					<a class="more" href="#">Read more</a>
-				</div>
-			</article>
-			<article>
-				<div class="current-date">
-					<p>April</p>
-					<p class="date">25</p>
-				</div>
-				<div class="info">
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
-					<a class="more" href="#">Read more</a>
-				</div>
-			</article>
-			<article>
-				<div class="current-date">
-					<p>April</p>
-					<p class="date">29</p>
-				</div>
-				<div class="info">
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad.</p>
-					<a class="more" href="#">Read more</a>
-				</div>
-			</article>
-			<div class="btn-holder">
-				<a class="btn blue" href="#">See all upcoming events</a>
-			</div>
-		</div>
-		<!-- / container -->
-	</section>
-	<div class="container">
-		<a href="#fancy" class="info-request">
-			<span class="holder">
-				<span class="title">Request information</span>
-				<span class="text">Do you have some questions? Fill the form and get an answer!</span>
-			</span>
-			<span class="arrow"></span>
-		</a>
-	</div>
-
-	<footer id="footer">
-		<div class="container">
-			<section>
-				<article class="col-1">
-					<h3>Contact</h3>
-					<ul>
-						<li class="address"><a href="#">151 W Adams St<br>Detroit, MI 48226</a></li>
-						<li class="mail"><a href="#">contact@harrisonuniversity.com</a></li>
-						<li class="phone last"><a href="#">(971) 536 845 924</a></li>
+	{% block content %}
+		<section class="about-us-section">
+			<div  class="container">
+				<div class="section-title text-center">
+					<h2>Welcome to <span>Shelly</span></h2>
+					<p>Nunc consectetur ex nunc, id porttitor leo semper eget. Vivamus interdum, mauris quis cursus sodales, urn</p>
+				</div><!--section-title end-->
+				<div class="about-sec">
+					<div class="container">
+						<div class="row">
+							<div class="col-lg-3 col-md-6 col-sm-6">
+								<div class="abt-col wow fadeInUp" data-wow-duration="1000ms">
+									<img src="{% static 'assets/img/icon5.png' %}" alt="">
+									<h3>Awesome Teachers</h3>
+									<p>Vivamus interdum, mauris interdum quis curdum  sodales</p>
+								</div><!--abt-col end-->
+							</div>
+							<div class="col-lg-3 col-md-6 col-sm-6">
+								<div class="abt-col wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="200ms">
+									<img src="{% static 'assets/img/icon7.png' %}" alt="">
+									<h3>Global Certificate</h3>
+									<p>Pelleneget  tespharetra que fringilla egugue id eget pharetra</p>
+								</div><!--abt-col end-->
+							</div>
+							<div class="col-lg-3 col-md-6 col-sm-6">
+								<div class="abt-col wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="400ms">
+									<img src="{% static 'assets/img/icon8.png' %}" alt="">
+									<h3>Best Programm</h3>
+									<p>Etiam risus neque, volutpat vel laoreet a, finibus volutpat non</p>
+								</div><!--abt-col end-->
+							</div>
+							<div class="col-lg-3 col-md-6 col-sm-6">
+								<div class="abt-col wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="600ms">
+									<img src="{% static 'assets/img/icon9.png' %}" alt="">
+									<h3>Student Support Service</h3>
+									<p>Mauris nec mi fequis ugiat, cursus tortor nec, pharetra tellus</p>
+								</div><!--abt-col end-->
+							</div>
+						</div>
+					</div>
+				</div><!--about-rw end-->
+				<div class="abt-img">
+					<ul class="masonary">
+						<li class="width1 wow zoomIn" data-wow-duration="1000ms"><a href="https://via.placeholder.com/1414x943" data-group="set1" title="" class="html5lightbox"><img src="https://via.placeholder.com/1414x943" alt=""></a></li>
+						<li class="width2 wow zoomIn" data-wow-duration="1000ms"><a href="https://via.placeholder.com/1440x961" data-group="set1" title="" class="html5lightbox"><img src="https://via.placeholder.com/1440x961" alt=""></a></li>
+						<li class="width3 wow zoomIn" data-wow-duration="1000ms"><a href="https://via.placeholder.com/2064x1376" data-group="set1" title="" class="html5lightbox"><img src="https://via.placeholder.com/2064x1376" alt=""></a></li>
+						<li class="width4 wow zoomIn" data-wow-duration="1000ms"><a href="https://via.placeholder.com/1504x1004" data-group="set1" title="" class="html5lightbox"><img src="https://via.placeholder.com/1504x1004" alt=""></a></li>
+						<li class="width5 wow zoomIn" data-wow-duration="1000ms"><a href="https://via.placeholder.com/1440x960" data-group="set1" title="" class="html5lightbox"><img src="https://via.placeholder.com/1440x960" alt=""></a></li>
+						<li class="width6 wow zoomIn" data-wow-duration="1000ms"><a href="https://via.placeholder.com/1393x929" data-group="set1" title="" class="html5lightbox"><img src="https://via.placeholder.com/1393x929" alt=""></a></li>
+						<li class="width7 wow zoomIn" data-wow-duration="1000ms"><a href="https://via.placeholder.com/1840x1228" data-group="set1" title="" class="html5lightbox"><img src="https://via.placeholder.com/1840x1228" alt=""></a></li>
+						<li class="width8 wow zoomIn" data-wow-duration="1000ms"><a href="https://via.placeholder.com/1404x936" data-group="set1" title="" class="html5lightbox"><img src="https://via.placeholder.com/1404x936" alt=""></a></li>
+						<li class="width9 wow zoomIn" data-wow-duration="1000ms"><a href="https://via.placeholder.com/750x502" data-group="set1" title="" class="html5lightbox"><img src="https://via.placeholder.com/750x502" alt=""></a></li>
+						<li class="width10 wow zoomIn" data-wow-duration="1000ms"><a href="https://via.placeholder.com/1500x1000" data-group="set1" title="" class="html5lightbox"><img src="https://via.placeholder.com/1500x1000" alt=""></a></li>
 					</ul>
-				</article>
-				<article class="col-2">
-					<h3>Forum topics</h3>
-					<ul>
-						<li><a href="#">Omnis iste natus error sit</a></li>
-						<li><a href="#">Nam libero tempore cum soluta</a></li>
-						<li><a href="#">Totam rem aperiam eaque </a></li>
-						<li><a href="#">Ipsa quae ab illo inventore veritatis </a></li>
-						<li class="last"><a href="#">Architecto beatae vitae dicta sunt </a></li>
-					</ul>
-				</article>
-				<article class="col-3">
-					<h3>Social media</h3>
-					<p>Temporibus autem quibusdam et aut debitis aut rerum necessitatibus saepe.</p>
-					<ul>
-						<li class="facebook"><a href="#">Facebook</a></li>
-						<li class="google-plus"><a href="#">Google+</a></li>
-						<li class="twitter"><a href="#">Twitter</a></li>
-						<li class="pinterest"><a href="#">Pinterest</a></li>
-					</ul>
-				</article>
-				<article class="col-4">
-					<h3>Newsletter</h3>
-					<p>Assumenda est omnis dolor repellendus temporibus autem quibusdam.</p>
-					<form action="#">
-						<input placeholder="Email address..." type="text">
-						<button type="submit">Subscribe</button>
-					</form>
-					<ul>
-						<li><a href="#"></a></li>
-					</ul>
-				</article>
-			</section>
-			<p class="copy">Copyright 2014 Manakamana Secondary Boarding School Designed by <a href="http://www.vandelaydesign.com/" title="Designed by Vandelay Design" target="_blank">Vandelay Design</a>. All rights reserved.</p>
-		</div>
-		<!-- / container -->
-	</footer>
-	<!-- / footer -->
+				</div><!-- abt-img end-->
+			</div>
+		</section><!--about-us-section end-->
 
-	<div id="fancy">
-		<h2>Request information</h2>
-		<form action="#">
-			<div class="left">
-				<fieldset class="mail"><input placeholder="Email address..." type="text"></fieldset>
-				<fieldset class="name"><input placeholder="Name..." type="text"></fieldset>
-				<fieldset class="subject"><select><option>Choose subject...</option><option>Choose subject...</option><option>Choose subject...</option></select></fieldset>
-			</div>
-			<div class="right">
-				<fieldset class="question"><textarea placeholder="Question..."></textarea></fieldset>
-			</div>
-			<div class="btn-holder">
-				<button class="btn blue" type="submit">Send request</button>
-			</div>
-		</form>
-	</div>
+		
 
-	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
-	<script>window.jQuery || document.write("<script src='js/jquery-1.11.1.min.js'>\x3C/script>")</script>
-	<script src="js/plugins.js"></script>
-	<script src="js/main.js"></script>
-</body>
-</html>
+		<section class="teachers-section">
+			<div class="container">
+				<div class="section-title text-center">
+					<h2>Our Awesome <br /> Teachers</h2>
+					<p>Quisque id ultrices tellus, ac sodales ex. Cras nec ante viverra, bibendum justo eget, lacinia dui. Donec ligula ligula, elementum sit amet</p>
+				</div><!--section-title end-->
+				<div class="teachers">
+					<div class="row">
+						<div class="col-lg-3 col-md-3 col-sm-6 col-6 full-wdth">
+							<div class="teacher">
+								<div class="teacher-img">
+									<img src="https://via.placeholder.com/1120x1680" alt="" class="w-100">
+									<div class="sc-div">
+										<ul>
+											<li><a href="#" title=""><i class="fab fa-instagram"></i></a></li>
+											<li><a href="#" title=""><i class="fab fa-linkedin-in"></i></a></li>
+											<li><a href="#" title=""><i class="fab fa-facebook-f"></i></a></li>
+										</ul>
+										<span><img src="{% static 'assets/img/plus.png' %}" alt=""></span>
+									</div>
+								</div>
+								<div class="teacher-info">
+									<h3><a href="#" title="">Polina Kerston</a></h3>
+									<span>English Teacher</span>
+								</div>
+							</div><!--teacher end-->
+						</div>
+						<div class="col-lg-3 col-md-3 col-sm-6 col-6 full-wdth">
+							<div class="teacher">
+								<div class="teacher-img">
+									<img src="https://via.placeholder.com/1376x2064" alt="" class="w-100">
+									<div class="sc-div">
+										<ul>
+											<li><a href="#" title=""><i class="fab fa-instagram"></i></a></li>
+											<li><a href="#" title=""><i class="fab fa-linkedin-in"></i></a></li>
+											<li><a href="#" title=""><i class="fab fa-facebook-f"></i></a></li>
+										</ul>
+										<span><img src="{% static 'assets/img/plus.png' %}" alt=""></span>
+									</div>
+								</div>
+								<div class="teacher-info">
+									<h3><a href="#" title="">Faadi Al Rahman</a></h3>
+									<span>Instructor</span>
+								</div>
+							</div><!--teacher end-->
+						</div>
+						<div class="col-lg-3 col-md-3 col-sm-6 col-6 full-wdth">
+							<div class="teacher">
+								<div class="teacher-img">
+									<img src="https://via.placeholder.com/1336x2004" alt="" class="w-100">
+									<div class="sc-div">
+										<ul>
+											<li><a href="#" title=""><i class="fab fa-instagram"></i></a></li>
+											<li><a href="#" title=""><i class="fab fa-linkedin-in"></i></a></li>
+											<li><a href="#" title=""><i class="fab fa-facebook-f"></i></a></li>
+										</ul>
+										<span><img src="{% static 'assets/img/plus.png' %}" alt=""></span>
+									</div>
+								</div>
+								<div class="teacher-info">
+									<h3><a href="#" title="">Chikelu Obasea</a></h3>
+									<span>Art Teacher</span>
+								</div>
+							</div><!--teacher end-->
+						</div>
+						<div class="col-lg-3 col-md-3 col-sm-6 col-6 full-wdth">
+							<div class="teacher">
+								<div class="teacher-img">
+									<img src="https://via.placeholder.com/1204x1804" alt="" class="w-100">
+									<div class="sc-div">
+										<ul>
+											<li><a href="#" title=""><i class="fab fa-instagram"></i></a></li>
+											<li><a href="#" title=""><i class="fab fa-linkedin-in"></i></a></li>
+											<li><a href="#" title=""><i class="fab fa-facebook-f"></i></a></li>
+										</ul>
+										<span><img src="{% static 'assets/img/plus.png' %}" alt=""></span>
+									</div>
+								</div>
+								<div class="teacher-info">
+									<h3><a href="#" title="">Katayama Fumiki</a></h3>
+									<span>Teacher</span>
+								</div>
+							</div><!--teacher end-->
+						</div>
+					</div>
+				</div><!--teachers end-->
+			</div>
+		</section>
+
+		<section class="course-section">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-6">
+						<div class="find-course">
+							<div class="sec-title">
+								<h2>Find Your Course</h2>
+								<p>ullam fringilla ipsum sed enim scelerisque, ac porttitor libero egestas. Donec iaculis nisi eget bibendum efficitur. Lorem ipsum dolor sit</p>
+								<h3><img src="{% static 'assets/img/icon11.png' %}" alt="">Call: <strong>+2 342 5446 67</strong></h3>
+							</div><!--sec-title end-->
+							<div class="course-img">
+								<img src="https://via.placeholder.com/476x526" alt="">
+							</div><!--course-img end-->
+						</div><!--find-course end-->
+					</div>
+					<div class="col-lg-6">
+						<div class="courses-list">
+							<div class="course-card wow fadeInLeft" data-wow-duration="1000ms">
+								<div class="d-flex flex-wrap align-items-center">
+									<ul class="course-meta">
+										<li>
+											<img src="{% static 'assets/img/icon12.png' %}" alt="">
+											29/07/2020
+										</li>
+										<li>
+											11AM to 15PM
+										</li>
+									</ul>
+									<span>FREE</span>
+								</div>
+								<h3><a href="#" title="">Digital Transformation Conference</a></h3>
+								<div class="d-flex flex-wrap">
+									<div class="posted-by">
+										<img src="https://via.placeholder.com/26x26" alt="">
+										<a href="#" title="">Amanda Kern</a>
+									</div>
+									<span class="locat"><img src="{% static 'assets/img/loct.png' %}" alt="" />43 castle road 517 district</span>
+								</div>
+							</div><!--course-card end-->
+							<div class="course-card wow fadeInLeft" data-wow-duration="1000ms" data-wow-delay="400ms">
+								<div class="d-flex flex-wrap align-items-center">
+									<ul class="course-meta">
+										<li>
+											<img src="{% static 'assets/img/icon12.png' %}" alt="">
+											29/07/2020
+										</li>
+										<li>
+											11AM to 15PM
+										</li>
+									</ul>
+									<span>$16</span>
+								</div>
+								<h3><a href="#" title="">Environment conference</a></h3>
+								<div class="d-flex flex-wrap">
+									<div class="posted-by">
+										<img src="https://via.placeholder.com/26x26" alt="">
+										<a href="#" title="">Cvita Doleschall</a>
+									</div>
+									<span class="locat"><img src="{% static 'assets/img/loct.png' %}" alt="" />43 castle road 517 district</span>
+								</div>
+							</div><!--course-card end-->
+							<div class="course-card wow fadeInLeft" data-wow-duration="1000ms" data-wow-delay="600ms">
+								<div class="d-flex flex-wrap align-items-center">
+									<ul class="course-meta">
+										<li>
+											<img src="{% static 'assets/img/icon12.png' %}" alt="">
+											29/07/2020
+										</li>
+										<li>
+											11AM to 15PM
+										</li>
+									</ul>
+									<span>$8</span>
+								</div>
+								<h3><a href="#" title="">Campus clean workshop</a></h3>
+								<div class="d-flex flex-wrap">
+									<div class="posted-by">
+										<img src="https://via.placeholder.com/26x26" alt="">
+										<a href="#" title="">Helena Brauer</a>
+									</div>
+									<span class="locat"><img src="{% static 'assets/img/loct.png' %}" alt="" />43 castle road 517 district</span>
+								</div>
+							</div><!--course-card end-->
+						</div><!--courses-list end-->
+						<a href="events" title="" class="all-btn">All Events <i class="fa fa-long-arrow-alt-right"></i></a>
+						<div class="clearfix"></div>
+					</div>
+				</div>
+			</div>
+		</section><!--course-section end-->
+
+		
+
+		<section class="newsletter-section">
+			<div class="container">
+				<div class="newsletter-sec">
+					<div class="row align-items-center">
+						<div class="col-lg-4">
+							<div class="newsz-ltr-text">
+								<h2>Join us <br /> and stay tuned!</h2>
+								<a href="contacts" title="" class="btn-default">Join Us <i class="fa fa-long-arrow-alt-right"></i></a>
+							</div><!--newsz-ltr-text end-->
+						</div>
+						<div class="col-lg-8">
+							<form class="newsletter-form">
+								<div class="row">
+									<div class="col-md-4">
+										<div class="form-group">
+											<input type="text" name="name" placeholder="Name">
+										</div><!--form-group end-->
+									</div>
+									<div class="col-md-4">
+										<div class="form-group">
+											<input type="email" name="email" placeholder="Email">
+										</div><!--form-group end-->
+									</div>
+									<div class="col-md-4">
+										<div class="form-group select-tg">
+											<select>
+												<option>Class</option>
+												<option>Class</option>
+												<option>Class</option>
+												<option>Class</option>
+												<option>Class</option>
+												<option>Class</option>
+											</select>
+										</div><!--form-group end-->
+									</div>
+									<div class="col-md-12">
+										<div class="form-group">
+											<textarea name="message" placeholder="Message"></textarea>
+										</div><!--form-group end-->
+									</div>
+								</div>
+							</form><!--newsletter-form end-->
+						</div>
+					</div>
+				</div><!--newsletter-sec end-->
+			</div>
+		</section><!--newsletter-sec end-->
+	{% endblock %}
+
