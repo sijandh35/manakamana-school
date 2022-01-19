@@ -4,7 +4,7 @@
         <div class="header-content d-flex flex-wrap align-items-center">
             <div class="logo">
                 <a href="/" title="">
-                    <img src="{% static 'assets/img/logo.png' %}" alt="" srcset="assets/img/01_Logo_2x.png 2x"> 
+                    <img src="{{ headers_footers.logo.url }}" alt="" srcset="assets/img/01_Logo_2x.png 2x"> 
                 </a>
             </div><!--logo end-->
             <ul class="contact-add d-flex flex-wrap">
@@ -13,7 +13,7 @@
                         <img src="{% static 'assets/img/icon1.png' %}" alt="">
                         <div class="contact-tt">
                             <h4>Call</h4>
-                            <span>+2 342 5446 67</span>
+                            <span>+977 {{ headers_footers.phone_number }}</span>
                         </div>
                     </div><!--contact-info end-->
                 </li>
@@ -22,7 +22,7 @@
                         <img src="{% static 'assets/img/icon2.png' %}" alt="">
                         <div class="contact-tt">
                             <h4>Work Time</h4>
-                            <span>Mon - Fri 8 AM - 5 PM</span>
+                            <span>{{ headers_footers.work_time }}</span>
                         </div>
                     </div><!--contact-info end-->
                 </li>
@@ -31,7 +31,7 @@
                         <img src="{% static 'assets/img/icon3.png' %}" alt="">
                         <div class="contact-tt">
                             <h4>Address</h4>
-                            <span>Franklin St, Greenpoint Ave</span>
+                            <span>{{ headers_footers.address }}</span>
                         </div>
                     </div><!--contact-info end-->
                 </li>
@@ -47,18 +47,24 @@
         <div class="navigation-bar d-flex flex-wrap align-items-center">
             <nav>
                 <ul>
-                    <li><a class="active" href="/" title="">Home</a></li>
-                    <li><a href="events" title="">Events</a></li>
-                    <li><a href="teachers" title="">Teachers</a></li>
-                    <li><a href="schedule" title="">Schedule</a></li>
-                    <li><a href="gallery" title="">Gallery</a></li>
-                    <li><a href="contacts" title="">Contacts</a></li>
+                    <li><a class="{% if home_active %}active{% endif %}" href="/" title="">Home</a></li>
+                    <li><a class="{% if events_active %}active{% endif %}" href="/events/" title="">Events</a></li>
+                    <li><a class="{% if teachers_active %}active{% endif %}" href="/teachers/" title="">Teachers</a></li>
+                    <li><a class="{% if schedule_active %}active{% endif %}" href="/schedule/" title="">Schedule</a></li>
+                    <li><a class="{% if gallery_active %}active{% endif %}" href="/gallery/" title="">Gallery</a></li>
+                    <li><a class="{% if contacts_active %}active{% endif %}" href="/contacts/" title="">Contacts</a></li>
                 </ul>
             </nav><!--nav end-->
             <ul class="social-links ml-auto">
-                <li><a href="#" title=""><i class="fab fa-facebook-f"></i></a></li>
-                <li><a href="#" title=""><i class="fab fa-linkedin-in"></i></a></li>
-                <li><a href="#" title=""><i class="fab fa-instagram"></i></a></li>
+                {% if headers_footers.facebook_url %}
+                <li><a href="{{ headers_footers.facebook_url }}" title="" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                {% endif %}
+                {% if headers_footers.google_url %}
+                <li><a href="{{ headers_footers.google_url }}" title="" target="_blank"><i class="fab fa-google"></i></a></li>
+                {% endif %}
+                {% if headers_footers.instagram_url %}
+                <li><a href="{{ headers_footers.instagram_url }}" title="" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                {% endif %}
             </ul>
         </div><!--navigation-bar end-->
     </div>
@@ -66,11 +72,11 @@
 
 <div class="responsive-menu">
     <ul>
-        <li><a class="active" href="/" title="">Home</a></li>
-        <li><a href="events" title="">Events</a></li>
-        <li><a href="teachers" title="">Teachers</a></li>
-        <li><a href="schedule" title="">Schedule</a></li>
-        <li><a href="gallery" title="">Gallery</a></li>
-        <li><a href="contacts" title="">Contacts</a></li>
+        <li><a class="{% if home_active %}active{% endif %}" href="/" title="">Home</a></li>
+        <li><a class="{% if events_active %}active{% endif %}" href="/events/" title="">Events</a></li>
+        <li><a class="{% if teachers_active %}active{% endif %}" href="/teachers/" title="">Teachers</a></li>
+        <li><a class="{% if schedule_active %}active{% endif %}" href="/schedule/" title="">Schedule</a></li>
+        <li><a class="{% if gallery_active %}active{% endif %}" href="/gallery/" title="">Gallery</a></li>
+        <li><a class="{% if contacts_active %}active{% endif %}" href="/contacts/" title="">Contacts</a></li>
     </ul>
 </div><!--responsive-menu end-->

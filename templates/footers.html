@@ -6,8 +6,8 @@
             <div class="row">
                 <div class="col-lg-3 col-md-6 col-sm-6">
                     <div class="widget widget-about">
-                        <img src="{% static 'assets/img/logo.png' %}" alt="">
-                        <p>Vivamus porta efficitur nibh nec convallis. Vestibulum egestas eleifend justo. Ut tellus ipsum, accumsan</p>
+                        <img src="{{ headers_footers.logo.url }}" alt="">
+                        <p>{{ headers_footers.info|safe}}</p>
                     </div><!--widget-about end-->
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-6">
@@ -18,7 +18,7 @@
                                     <img src="{% static 'assets/img/icon1.png' %}" alt="">
                                     <div class="contact-tt">
                                         <h4>Call</h4>
-                                        <span>+2 342 5446 67</span>
+                                        <span>+977 {{ headers_footers.phone_number }}</span>
                                     </div>
                                 </div><!--contact-info end-->
                             </li>
@@ -27,7 +27,7 @@
                                     <img src="{% static 'assets/img/icon2.png' %}" alt="">
                                     <div class="contact-tt">
                                         <h4>Work Time</h4>
-                                        <span>Mon - Fri 8 AM - 5 PM</span>
+                                        <span>{{ headers_footers.work_time }}</span>
                                     </div>
                                 </div><!--contact-info end-->
                             </li>
@@ -36,7 +36,7 @@
                                     <img src="{% static 'assets/img/icon3.png' %}" alt="">
                                     <div class="contact-tt">
                                         <h4>Address</h4>
-                                        <span>Franklin St, Greenpoint Ave</span>
+                                        <span>{{ headers_footers.address }}</span>
                                     </div>
                                 </div><!--contact-info end-->
                             </li>
@@ -48,11 +48,11 @@
                         <h3 class="widget-title">Quick Links</h3>
                         <ul>
                             <li><a class="active" href="/" title="">Home</a></li>
-                            <li><a href="events" title="">Events</a></li>
-                            <li><a href="teachers" title="">Teachers</a></li>
-                            <li><a href="schedule" title="">Schedule</a></li>
-                            <li><a href="gallery" title="">Gallery</a></li>
-                            <li><a href="contacts" title="">Contacts</a></li>
+                            <li><a href="/events/" title="">Events</a></li>
+                            <li><a href="/teachers/" title="">Teachers</a></li>
+                            <li><a href="/schedule/" title="">Schedule</a></li>
+                            <li><a href="/gallery/" title="">Gallery</a></li>
+                            <li><a href="/contacts/" title="">Contacts</a></li>
                         </ul>
                     </div><!--widget-links end-->
                 </div>
@@ -66,13 +66,20 @@
         <div class="bottom-footer">
             <div class="row align-items-center">
                 <div class="col-lg-6 col-md-6 col-sm-6">
-                    <p>© Copyrights 2020 Shelly All rights reserved</p>
+                    <p>© Copyrights 2022 Manakamana Secondary Boarding School. All rights reserved.</p>
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-6">
                     <ul class="social-links">
-                        <li><a href="#" title=""><i class="fab fa-facebook-f"></i></a></li>
-                        <li><a href="#" title=""><i class="fab fa-linkedin-in"></i></a></li>
-                        <li><a href="#" title=""><i class="fab fa-instagram"></i></a></li>
+                        {% if headers_footers.facebook_url %}
+                        <li><a href="{{ headers_footers.facebook_url }}" title="" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                        {% endif %}
+                        {% if headers_footers.google_url %}
+                        <li><a href="{{ headers_footers.google_url }}" title="" target="_blank"><i class="fab fa-google"></i></a></li>
+                        {% endif %}
+                        {% if headers_footers.instagram_url %}
+                        <li><a href="{{ headers_footers.instagram_url }}" title="" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                        {% endif %}
+                        
                     </ul>
                 </div>
             </div>

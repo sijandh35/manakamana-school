@@ -33,7 +33,7 @@ schema_view = get_schema_view(
 
 urlpatterns = [
     path('__debug__/', include(debug_toolbar.urls)),
-    path('', TemplateView.as_view(template_name="about.html")),
+    path('', include('core.urls')),
     path('admin/', admin.site.urls),
     path('api/docs/', schema_view.with_ui('swagger',
          cache_timeout=0), name='schema-swagger-ui'),
