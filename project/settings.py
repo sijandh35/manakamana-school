@@ -46,7 +46,8 @@ INSTALLED_APPS = [
     # local apps
     'user',
     'core',
-    'api'
+    'api',
+    'tinymce'
 ]
 
 REST_FRAMEWORK = {
