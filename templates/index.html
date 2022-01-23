@@ -11,8 +11,7 @@
 				<div class="row align-items-center">
 					<div class="col-lg-7 col-md-7">
 						<div class="banner-text wow fadeInLeft" data-wow-duration="1000ms">
-							<h2>The Smarter  Way to Learn <span>Anything</span></h2>
-							<p>Mauris malesuada enim eget blandit gravida. Duis hendrerit cursus turpis, id mollis est rutrum nec. Sed interdum nisi id libero tincidunt, sit amet vestibulum tortor porttitor. Cras ligula lacus, ullamcorper sed</p>
+							{{home_obj.first_row_desc|safe}}
 							<form class="search-form">
 								<input type="text" name="search" placeholder="Search Class">
 								<button><i class="fa fa-search"></i></button>
@@ -21,7 +20,7 @@
 					</div>
 					<div class="col-lg-5 col-md-5">
 						<div class="banner-img wow zoomIn" data-wow-duration="1000ms">
-							<img src="https://via.placeholder.com/497x586" alt="">
+							<img src="{{home_obj.first_row_image.url}}" style='width: 497px;height: 586px;' alt="https://via.placeholder.com/497x586">
 						</div><!--banner-img end-->
 						<div class="elements-bg wow zoomIn" data-wow-duration="1000ms"></div>
 					</div>
@@ -29,7 +28,7 @@
 			</div>
 		</section><!--main-banner end-->
 		
-		<h2 class="main-title">Nepal</h2>
+		<h2 class="main-title">{{home_obj.first_row_title}}</h2>
 
 	</div><!--main-section end-->
 	{% endblock %}
@@ -39,8 +38,7 @@
 		<section class="about-us-section">
 			<div  class="container">
 				<div class="section-title text-center">
-					<h2>Welcome to <span>Shelly</span></h2>
-					<p>Nunc consectetur ex nunc, id porttitor leo semper eget. Vivamus interdum, mauris quis cursus sodales, urn</p>
+					{{home_obj.second_row_desc|safe}}
 				</div><!--section-title end-->
 				<div class="about-sec">
 					<div class="container">
@@ -48,29 +46,25 @@
 							<div class="col-lg-3 col-md-6 col-sm-6">
 								<div class="abt-col wow fadeInUp" data-wow-duration="1000ms">
 									<img src="{% static 'assets/img/icon5.png' %}" alt="">
-									<h3>Awesome Teachers</h3>
-									<p>Vivamus interdum, mauris interdum quis curdum  sodales</p>
+									{{home_obj.second_row_top_title_one|safe}}
 								</div><!--abt-col end-->
 							</div>
 							<div class="col-lg-3 col-md-6 col-sm-6">
 								<div class="abt-col wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="200ms">
 									<img src="{% static 'assets/img/icon7.png' %}" alt="">
-									<h3>Global Certificate</h3>
-									<p>Pelleneget  tespharetra que fringilla egugue id eget pharetra</p>
+									{{home_obj.second_row_top_title_two|safe}}
 								</div><!--abt-col end-->
 							</div>
 							<div class="col-lg-3 col-md-6 col-sm-6">
 								<div class="abt-col wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="400ms">
 									<img src="{% static 'assets/img/icon8.png' %}" alt="">
-									<h3>Best Programm</h3>
-									<p>Etiam risus neque, volutpat vel laoreet a, finibus volutpat non</p>
+									{{home_obj.second_row_top_title_three|safe}}
 								</div><!--abt-col end-->
 							</div>
 							<div class="col-lg-3 col-md-6 col-sm-6">
 								<div class="abt-col wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="600ms">
 									<img src="{% static 'assets/img/icon9.png' %}" alt="">
-									<h3>Student Support Service</h3>
-									<p>Mauris nec mi fequis ugiat, cursus tortor nec, pharetra tellus</p>
+									{{home_obj.second_row_top_title_four|safe}}
 								</div><!--abt-col end-->
 							</div>
 						</div>
@@ -78,16 +72,16 @@
 				</div><!--about-rw end-->
 				<div class="abt-img">
 					<ul class="masonary">
-						<li class="width1 wow zoomIn" data-wow-duration="1000ms"><a href="https://via.placeholder.com/1414x943" data-group="set1" title="" class="html5lightbox"><img src="https://via.placeholder.com/1414x943" alt=""></a></li>
-						<li class="width2 wow zoomIn" data-wow-duration="1000ms"><a href="https://via.placeholder.com/1440x961" data-group="set1" title="" class="html5lightbox"><img src="https://via.placeholder.com/1440x961" alt=""></a></li>
-						<li class="width3 wow zoomIn" data-wow-duration="1000ms"><a href="https://via.placeholder.com/2064x1376" data-group="set1" title="" class="html5lightbox"><img src="https://via.placeholder.com/2064x1376" alt=""></a></li>
-						<li class="width4 wow zoomIn" data-wow-duration="1000ms"><a href="https://via.placeholder.com/1504x1004" data-group="set1" title="" class="html5lightbox"><img src="https://via.placeholder.com/1504x1004" alt=""></a></li>
-						<li class="width5 wow zoomIn" data-wow-duration="1000ms"><a href="https://via.placeholder.com/1440x960" data-group="set1" title="" class="html5lightbox"><img src="https://via.placeholder.com/1440x960" alt=""></a></li>
-						<li class="width6 wow zoomIn" data-wow-duration="1000ms"><a href="https://via.placeholder.com/1393x929" data-group="set1" title="" class="html5lightbox"><img src="https://via.placeholder.com/1393x929" alt=""></a></li>
-						<li class="width7 wow zoomIn" data-wow-duration="1000ms"><a href="https://via.placeholder.com/1840x1228" data-group="set1" title="" class="html5lightbox"><img src="https://via.placeholder.com/1840x1228" alt=""></a></li>
-						<li class="width8 wow zoomIn" data-wow-duration="1000ms"><a href="https://via.placeholder.com/1404x936" data-group="set1" title="" class="html5lightbox"><img src="https://via.placeholder.com/1404x936" alt=""></a></li>
-						<li class="width9 wow zoomIn" data-wow-duration="1000ms"><a href="https://via.placeholder.com/750x502" data-group="set1" title="" class="html5lightbox"><img src="https://via.placeholder.com/750x502" alt=""></a></li>
-						<li class="width10 wow zoomIn" data-wow-duration="1000ms"><a href="https://via.placeholder.com/1500x1000" data-group="set1" title="" class="html5lightbox"><img src="https://via.placeholder.com/1500x1000" alt=""></a></li>
+						<li class="width1 wow zoomIn" data-wow-duration="1000ms"><a href="{% if home_obj.second_row_image_one %}{{home_obj.second_row_image_one.url}}{% else %}https://via.placeholder.com/1414x943{% endif %}" data-group="set1" title="" class="html5lightbox"><img src="{% if home_obj.second_row_image_one %}{{home_obj.second_row_image_one.url}}{% else %}https://via.placeholder.com/1414x943{% endif %}" alt=""></a></li>
+						<li class="width2 wow zoomIn" data-wow-duration="1000ms"><a href="{% if home_obj.second_row_image_two %}{{home_obj.second_row_image_two.url}}{% else %}https://via.placeholder.com/1440x961{% endif %}" data-group="set1" title="" class="html5lightbox"><img src="{% if home_obj.second_row_image_two %}{{home_obj.second_row_image_two.url}}{% else %}https://via.placeholder.com/1440x961{% endif %}"alt=""></a></li>
+						<li class="width3 wow zoomIn" data-wow-duration="1000ms"><a href="{% if home_obj.second_row_image_three %}{{home_obj.second_row_image_three.url}}{% else %}https://via.placeholder.com/2064x1376{% endif %}" data-group="set1" title="" class="html5lightbox"><img src="{% if home_obj.second_row_image_three %}{{home_obj.second_row_image_three.url}}{% else %}https://via.placeholder.com/2064x1376{% endif %}" alt=""></a></li>
+						<li class="width4 wow zoomIn" data-wow-duration="1000ms"><a href="{% if home_obj.second_row_image_four %}{{home_obj.second_row_image_four.url}}{% else %}https://via.placeholder.com/1504x1004{% endif %}" data-group="set1" title="" class="html5lightbox"><img src="{% if home_obj.second_row_image_four %}{{home_obj.second_row_image_four.url}}{% else %}https://via.placeholder.com/1504x1004{% endif %}"alt=""></a></li>
+						<li class="width5 wow zoomIn" data-wow-duration="1000ms"><a href="{% if home_obj.second_row_image_five %}{{home_obj.second_row_image_five.url}}{% else %}https://via.placeholder.com/1440x960{% endif %}" data-group="set1" title="" class="html5lightbox"><img src="{% if home_obj.second_row_image_five %}{{home_obj.second_row_image_five.url}}{% else %}https://via.placeholder.com/1440x960{% endif %}" alt=""></a></li>
+						<li class="width6 wow zoomIn" data-wow-duration="1000ms"><a href="{% if home_obj.second_row_image_six %}{{home_obj.second_row_image_six.url}}{% else %}https://via.placeholder.com/1393x929{% endif %}" data-group="set1" title="" class="html5lightbox"><img src="{% if home_obj.second_row_image_six %}{{home_obj.second_row_image_six.url}}{% else %}https://via.placeholder.com/1393x929{% endif %}" alt=""></a></li>
+						<li class="width7 wow zoomIn" data-wow-duration="1000ms"><a href="{% if home_obj.second_row_image_seven %}{{home_obj.second_row_image_seven.url}}{% else %}https://via.placeholder.com/1840x1228{% endif %}" data-group="set1" title="" class="html5lightbox"><img src="{% if home_obj.second_row_image_seven %}{{home_obj.second_row_image_seven.url}}{% else %}https://via.placeholder.com/1840x1228{% endif %}" alt=""></a></li>
+						<li class="width8 wow zoomIn" data-wow-duration="1000ms"><a href="{% if home_obj.second_row_image_eight %}{{home_obj.second_row_image_eight.url}}{% else %}https://via.placeholder.com/1404x936{% endif %}" data-group="set1" title="" class="html5lightbox"><img src="{% if home_obj.second_row_image_eight %}{{home_obj.second_row_image_eight.url}}{% else %}https://via.placeholder.com/1404x936{% endif %}" alt=""></a></li>
+						<li class="width9 wow zoomIn" data-wow-duration="1000ms"><a href="{% if home_obj.second_row_image_nine %}{{home_obj.second_row_image_nine.url}}{% else %}https://via.placeholder.com/750x502{% endif %}" data-group="set1" title="" class="html5lightbox"><img src="{% if home_obj.second_row_image_nine %}{{home_obj.second_row_image_nine.url}}{% else %}https://via.placeholder.com/750x502{% endif %}" alt=""></a></li>
+						<li class="width10 wow zoomIn" data-wow-duration="1000ms"><a href="{% if home_obj.second_row_image_ten %}{{home_obj.second_row_image_ten.url}}{% else %}https://via.placeholder.com/1500x1000{% endif %}" data-group="set1" title="" class="html5lightbox"><img src="{% if home_obj.second_row_image_ten %}{{home_obj.second_row_image_ten.url}}{% else %}https://via.placeholder.com/1500x1000{% endif %}" alt=""></a></li>
 					</ul>
 				</div><!-- abt-img end-->
 			</div>
@@ -98,87 +92,41 @@
 		<section class="teachers-section">
 			<div class="container">
 				<div class="section-title text-center">
-					<h2>Our Awesome <br /> Teachers</h2>
-					<p>Quisque id ultrices tellus, ac sodales ex. Cras nec ante viverra, bibendum justo eget, lacinia dui. Donec ligula ligula, elementum sit amet</p>
+					{{home_obj.third_row_desc|safe}}
 				</div><!--section-title end-->
 				<div class="teachers">
 					<div class="row">
+						{% for teacher in teachers %}
 						<div class="col-lg-3 col-md-3 col-sm-6 col-6 full-wdth">
 							<div class="teacher">
 								<div class="teacher-img">
-									<img src="https://via.placeholder.com/1120x1680" alt="" class="w-100">
+									<img src="{{teacher.image.url}}" alt="" class="w-100" style="width:100%;height: 300px;">
 									<div class="sc-div">
 										<ul>
+											{% if teacher.instagram_url %}
 											<li><a href="#" title=""><i class="fab fa-instagram"></i></a></li>
+											{% endif %}
+											{% if teacher.linkedin_url %}
 											<li><a href="#" title=""><i class="fab fa-linkedin-in"></i></a></li>
+											{% endif %}
+											{% if teacher.facebook_url %}
 											<li><a href="#" title=""><i class="fab fa-facebook-f"></i></a></li>
+											{% endif %}
+											{% if teacher.google_url %}
+											<li><a href="#" title=""><i class="fab fa-google"></i></a></li>
+											{% endif %}
 										</ul>
 										<span><img src="{% static 'assets/img/plus.png' %}" alt=""></span>
 									</div>
 								</div>
 								<div class="teacher-info">
-									<h3><a href="#" title="">Polina Kerston</a></h3>
-									<span>English Teacher</span>
+									<h3><a href="#" title="">{{teacher.name}}</a></h3>
+									<span>{{teacher.designation}}</span>
 								</div>
 							</div><!--teacher end-->
 						</div>
-						<div class="col-lg-3 col-md-3 col-sm-6 col-6 full-wdth">
-							<div class="teacher">
-								<div class="teacher-img">
-									<img src="https://via.placeholder.com/1376x2064" alt="" class="w-100">
-									<div class="sc-div">
-										<ul>
-											<li><a href="#" title=""><i class="fab fa-instagram"></i></a></li>
-											<li><a href="#" title=""><i class="fab fa-linkedin-in"></i></a></li>
-											<li><a href="#" title=""><i class="fab fa-facebook-f"></i></a></li>
-										</ul>
-										<span><img src="{% static 'assets/img/plus.png' %}" alt=""></span>
-									</div>
-								</div>
-								<div class="teacher-info">
-									<h3><a href="#" title="">Faadi Al Rahman</a></h3>
-									<span>Instructor</span>
-								</div>
-							</div><!--teacher end-->
-						</div>
-						<div class="col-lg-3 col-md-3 col-sm-6 col-6 full-wdth">
-							<div class="teacher">
-								<div class="teacher-img">
-									<img src="https://via.placeholder.com/1336x2004" alt="" class="w-100">
-									<div class="sc-div">
-										<ul>
-											<li><a href="#" title=""><i class="fab fa-instagram"></i></a></li>
-											<li><a href="#" title=""><i class="fab fa-linkedin-in"></i></a></li>
-											<li><a href="#" title=""><i class="fab fa-facebook-f"></i></a></li>
-										</ul>
-										<span><img src="{% static 'assets/img/plus.png' %}" alt=""></span>
-									</div>
-								</div>
-								<div class="teacher-info">
-									<h3><a href="#" title="">Chikelu Obasea</a></h3>
-									<span>Art Teacher</span>
-								</div>
-							</div><!--teacher end-->
-						</div>
-						<div class="col-lg-3 col-md-3 col-sm-6 col-6 full-wdth">
-							<div class="teacher">
-								<div class="teacher-img">
-									<img src="https://via.placeholder.com/1204x1804" alt="" class="w-100">
-									<div class="sc-div">
-										<ul>
-											<li><a href="#" title=""><i class="fab fa-instagram"></i></a></li>
-											<li><a href="#" title=""><i class="fab fa-linkedin-in"></i></a></li>
-											<li><a href="#" title=""><i class="fab fa-facebook-f"></i></a></li>
-										</ul>
-										<span><img src="{% static 'assets/img/plus.png' %}" alt=""></span>
-									</div>
-								</div>
-								<div class="teacher-info">
-									<h3><a href="#" title="">Katayama Fumiki</a></h3>
-									<span>Teacher</span>
-								</div>
-							</div><!--teacher end-->
-						</div>
+						{% endfor %}
+
 					</div>
 				</div><!--teachers end-->
 			</div>
@@ -190,83 +138,39 @@
 					<div class="col-lg-6">
 						<div class="find-course">
 							<div class="sec-title">
-								<h2>Find Your Course</h2>
-								<p>ullam fringilla ipsum sed enim scelerisque, ac porttitor libero egestas. Donec iaculis nisi eget bibendum efficitur. Lorem ipsum dolor sit</p>
-								<h3><img src="{% static 'assets/img/icon11.png' %}" alt="">Call: <strong>+2 342 5446 67</strong></h3>
+								{{home_obj.forth_row_desc|safe}}
 							</div><!--sec-title end-->
 							<div class="course-img">
-								<img src="https://via.placeholder.com/476x526" alt="">
+								<img src="{{event_image.image.url}}" style='width: 476px;height: 526px;' alt="">
 							</div><!--course-img end-->
 						</div><!--find-course end-->
 					</div>
 					<div class="col-lg-6">
 						<div class="courses-list">
+							{% for event in events %}
 							<div class="course-card wow fadeInLeft" data-wow-duration="1000ms">
 								<div class="d-flex flex-wrap align-items-center">
 									<ul class="course-meta">
 										<li>
 											<img src="{% static 'assets/img/icon12.png' %}" alt="">
-											29/07/2020
+											{{event.date}}
 										</li>
 										<li>
-											11AM to 15PM
+											{{event.time}}
 										</li>
 									</ul>
-									<span>FREE</span>
+									<span>{% if event.upcoming %}Upcoming{%endif%}</span>
 								</div>
-								<h3><a href="#" title="">Digital Transformation Conference</a></h3>
+								<h3><a href="#" title="">{{event.title}}</a></h3>
 								<div class="d-flex flex-wrap">
 									<div class="posted-by">
-										<img src="https://via.placeholder.com/26x26" alt="">
-										<a href="#" title="">Amanda Kern</a>
+										<img src="{{event.event_by_image.url}}" style="width: 30px;height: 30px;border-radius: 50%;" alt="">
+										<a href="#" title="">{{event.event_by}}</a>
 									</div>
-									<span class="locat"><img src="{% static 'assets/img/loct.png' %}" alt="" />43 castle road 517 district</span>
+									<span class="locat"><img src="{% static 'assets/img/loct.png' %}" alt="" />{{event.location}}</span>
 								</div>
 							</div><!--course-card end-->
-							<div class="course-card wow fadeInLeft" data-wow-duration="1000ms" data-wow-delay="400ms">
-								<div class="d-flex flex-wrap align-items-center">
-									<ul class="course-meta">
-										<li>
-											<img src="{% static 'assets/img/icon12.png' %}" alt="">
-											29/07/2020
-										</li>
-										<li>
-											11AM to 15PM
-										</li>
-									</ul>
-									<span>$16</span>
-								</div>
-								<h3><a href="#" title="">Environment conference</a></h3>
-								<div class="d-flex flex-wrap">
-									<div class="posted-by">
-										<img src="https://via.placeholder.com/26x26" alt="">
-										<a href="#" title="">Cvita Doleschall</a>
-									</div>
-									<span class="locat"><img src="{% static 'assets/img/loct.png' %}" alt="" />43 castle road 517 district</span>
-								</div>
-							</div><!--course-card end-->
-							<div class="course-card wow fadeInLeft" data-wow-duration="1000ms" data-wow-delay="600ms">
-								<div class="d-flex flex-wrap align-items-center">
-									<ul class="course-meta">
-										<li>
-											<img src="{% static 'assets/img/icon12.png' %}" alt="">
-											29/07/2020
-										</li>
-										<li>
-											11AM to 15PM
-										</li>
-									</ul>
-									<span>$8</span>
-								</div>
-								<h3><a href="#" title="">Campus clean workshop</a></h3>
-								<div class="d-flex flex-wrap">
-									<div class="posted-by">
-										<img src="https://via.placeholder.com/26x26" alt="">
-										<a href="#" title="">Helena Brauer</a>
-									</div>
-									<span class="locat"><img src="{% static 'assets/img/loct.png' %}" alt="" />43 castle road 517 district</span>
-								</div>
-							</div><!--course-card end-->
+							{% endfor %}
 						</div><!--courses-list end-->
 						<a href="events" title="" class="all-btn">All Events <i class="fa fa-long-arrow-alt-right"></i></a>
 						<div class="clearfix"></div>
