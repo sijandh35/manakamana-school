@@ -42,6 +42,28 @@
 <script src="{% static 'assets/js/slick.min.js' %}"></script>
 <script src="{% static 'assets/js/tweenMax.js' %}"></script>
 <script src="{% static 'assets/js/scripts.js' %}"></script>
+<script>
+	$("#form_submit").click(function (e) {
+		e.preventDefault();
+		var serializedData = $('#contact').serialize();
+		$.ajax({
+			type: 'POST',
+			url: "{% url 'contacts' %}",
+			data: serializedData,
+			success: function (response) {
+				$("#contact").trigger('reset');
+				if (response == 'success') {
+					alert('Your message has been sent successfully.');
+				} else {
+					alert(response);
+				}
+			},
+			error: function (response) {
+			  alert('Error sending message.');
+			}
+		})
+	})
+  </script>
 
 {% block script %}
 {% endblock %}

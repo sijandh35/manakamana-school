@@ -13,9 +13,16 @@
 					<div class="col-lg-7 col-md-7">
 						<div class="banner-text wow fadeInLeft" data-wow-duration="1000ms">
 							{{home_obj.first_row_desc|safe}}
-							<form class="search-form">
-								<input type="text" name="search" placeholder="Search Class">
-								<button><i class="fa fa-search"></i></button>
+							<form action='schedule/' method='GET' class="search-form">
+								<input list="gradeSearch"  type="text" name="search" placeholder="Search Class">
+								<datalist id="gradeSearch" style='width: 200px;max-width: 200px;'>
+									{% for grade in grade_list %}
+										<option value="Grade {{grade}}">
+									{% endfor %}
+									
+									
+								</datalist>
+								<button type='submit'><i class="fa fa-search"></i></button>
 							</form>
 						</div>
 					</div>
@@ -182,4 +189,16 @@
 
 		{% include 'newsletter.html' %}
 	{% endblock %}
+	<!-- {% block script %}
+	<script>
+		$(document).ready(function () {
+			$('#class-search').click(function(e) {
+				e.preventDefault();
+				console.log($('#gradeSearch'), $('#gradeSearch').val());
+				let grade_val = $('#gradeSearch').val().split(" ");
+				location.href = window.location.href + '/schedule/?grade=' + gradeSearch[1]
+			})
+		})
+	</script>
+	{% endblock %} -->
 
