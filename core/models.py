@@ -103,14 +103,15 @@ class Schedule(models.Model):
     color_choice_one = models.CharField(max_length=255, blank=True, null=True)
     color_choice_two = models.CharField(max_length=255, blank=True, null=True)
 
-    def __str__(self):
-        return self.grade + ' - ' + self.day + ' - ' + self.period.name + ' - ' + self.subject
+    # def __str__(self):
+    #     return self.grade + ' - ' + self.day + ' - ' + self.period.name 
 
 class Message(models.Model):
     name = models.CharField(max_length=255)
     email = models.EmailField()
+    subject = models.CharField(max_length=255, blank=True, null=True)
     message = HTMLField(blank=True, null=True)
-    date = models.DateField(blank=True, null=True)
+    date = models.DateTimeField(blank=True, null=True)
 
     def __str__(self):
         return self.name

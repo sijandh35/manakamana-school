@@ -47,8 +47,10 @@ INSTALLED_APPS = [
     'user',
     'core',
     'api',
-    'tinymce'
+    'tinymce',
+    'django_extensions',
 ]
+SHELL_PLUS = "ipython"
 
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [
