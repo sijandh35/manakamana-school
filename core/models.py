@@ -1,5 +1,6 @@
 from django.db import models
 from tinymce.models import HTMLField
+from django.contrib.auth.models import User
 
 # Create your models here.
 GRADE_CHOICE = [
@@ -31,6 +32,10 @@ DAY_CHOICE = [
     ('Friday', 'Friday'),
     ('Saturday', 'Saturday')
 ]
+
+class Grade(models.Model):
+    name = models.CharField(max_length=50)
+    section = models.CharField(max_length=50, blank=True, null=True)
 
 class HeadersFooters(models.Model):
     logo = models.ImageField(upload_to='logo', blank=True, null=True)
@@ -80,17 +85,11 @@ class Events(models.Model):
     def __str__(self):
         return self.title
 
-class Teachers(models.Model):
-    name = models.CharField(max_length=255)
-    image = models.ImageField(upload_to='teachers', blank=True, null=True)
-    designation = models.CharField(max_length=255, blank=True, null=True)
-    facebook_url = models.URLField(blank=True, null=True)
-    instagram_url = models.URLField(blank=True, null=True)
-    google_url = models.URLField(blank=True, null=True)
-    linkedin_url = models.URLField(blank=True, null=True)
 
-    def __str__(self):
-        return self.name
+class Teachers(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE, blank=True, null=True)
+    class_name = models.ManyToManyField('Grade', blank=True)
+
 
 class Period(models.Model):
     name = models.CharField(max_length=255)
@@ -120,3 +119,18 @@ class Message(models.Model):
 
     def __str__(self):
         return self.name
+
+class Students(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    class_name = models.ForeignKey(Grade, on_delete=models.CASCADE)
+    
+class Homework(models.Model):
+    class_name = models.ForeignKey(Grade, on_delete=models.CASCADE)
+    teacher = models.ForeignKey(Teachers, on_delete=models.CASCADE)
+    student = models.ManyToManyField(Students, blank=True)
+    files = models.FileField(upload_to='homework', blank=True, null=True)
+
+class Results(models.Model):
+    class_name = models.ForeignKey(Grade, on_delete=models.CASCADE)
+    student = models.ForeignKey(Students, on_delete=models.CASCADE)
+    files = models.FileField(upload_to='results', blank=True, null=True)
