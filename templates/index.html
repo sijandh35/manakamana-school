@@ -14,10 +14,10 @@
 						<div class="banner-text wow fadeInLeft" data-wow-duration="1000ms">
 							{{home_obj.first_row_desc|safe}}
 							<form action='schedule/' method='GET' class="search-form">
-								<input list="gradeSearch"  type="text" name="search" placeholder="Search Class">
+								<input list="gradeSearch"  type="text" name="grade" placeholder="Search Class">
 								<datalist id="gradeSearch" style='width: 200px;max-width: 200px;'>
 									{% for grade in grade_list %}
-										<option value="Grade {{grade}}">
+										<option value="{{grade}}">
 									{% endfor %}
 									
 									
