@@ -27,6 +27,10 @@ class UserProfile(models.Model):
     office_number = models.CharField(max_length=64, blank=True, null=True)
     skype = models.CharField(max_length=64, blank=True, null=True)
     address = models.CharField(max_length=500, blank=True, null=True)
+    facebook = models.CharField(max_length=500, blank=True, null=True)
+    google = models.CharField(max_length=500, blank=True, null=True)
+    linkedin = models.CharField(max_length=500, blank=True, null=True)
+    instagram = models.CharField(max_length=500, blank=True, null=True)
     is_deleted = models.BooleanField(default=False)
     image = models.ImageField(
         upload_to='upload/profile/', null=True, blank=True)
@@ -34,6 +38,7 @@ class UserProfile(models.Model):
         upload_to='upload/profile/', editable=False, null=True, blank=True)
     date_created = models.DateTimeField(
         auto_now_add=True, blank=True, null=True)
+    designation = models.CharField(max_length=1500, blank=True, null=True)
     date_modified = models.DateTimeField(auto_now=True, blank=True, null=True)
     objects = models.Manager()
     active = ActiveManager()

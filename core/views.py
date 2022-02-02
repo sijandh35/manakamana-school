@@ -3,6 +3,7 @@ from django.http import HttpResponse
 from .models import *
 from django.db.models import When, BooleanField, Case, Value
 import datetime, math, random
+from user.models import UserProfile
 
 # Create your views here.
 def headers():
@@ -15,7 +16,8 @@ def index(request):
     today = datetime.date.today()
     header_footers = headers()
     home_page = HomePage.objects.first()
-    teachers = Teachers.objects.all()
+    users = list(Teachers.objects.select_related('user').values_list('user__id',flat=True))
+    teachers = UserProfile.objects.filter(user__id__in=users)
     events = Events.objects.annotate(upcoming=Case(When(date__gte=today, then=Value(True)), default=False, output_field=BooleanField())).order_by('-date')[:3]
     context = {
         'headers_footers': header_footers,
@@ -51,7 +53,8 @@ def events(request):
 
 def teachers(request):
     header_footers = headers()
-    teachers = Teachers.objects.all()
+    users = list(Teachers.objects.select_related('user').values_list('user__id',flat=True))
+    teachers = UserProfile.objects.filter(user__id__in=users)
     page_size = request.GET.get('page_size', 8)
     page_no = request.GET.get('page_no', 1)
     prev_page = int(page_no) - 1 if int(page_no) > 1 else None
